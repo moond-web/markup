@@ -1,0 +1,305 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*전체 스타일 초기화*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+/*전체 스타일 초기화 끝*/
+
+
+/*header 시작*/
+
+header {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+header .inner {
+    width: 1180px;
+    height: 120px;
+    margin: 0 auto;
+    position: relative;
+    /*부모역할, 자식absolute 요소의 기준점이 된다.*/
+}
+
+header .inner h1 {
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+}
+
+header .inner h1 a {
+    font: bold 24px/1 "arial";
+    color: #444;
+}
+
+/*header 영역 안에 있는 로고 작업 끝*/ 
+
+/*util 시작*/
+
+header .inner .util {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+header .inner .util li {
+    float: left;
+}
+
+header .inner .util li a {
+    display: block;
+    font: 12px/1 "arial";
+    color: #555;
+    padding: 0 10px;
+}
+
+/*util 시작*/
+
+/*gnb 시작*/
+
+header .inner #gnb {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+header .inner #gnb li {
+    float: left
+}
+
+header .inner #gnb li a {
+    display: block;
+    font: bold 15px/1 "Noto Sans kr";
+    color: #555;
+    padding: 25px 40px;
+    transition: all 0.5s;
+}
+header .inner #gnb li a:hover {
+     color: #fff;
+     background-color: #aaa;
+}
+
+/*gnb끝*/
+
+/*figure 시작*/
+
+figure {
+    width: 100%;
+    height: calc(100vh - 120px);
+    /*전체 브라우저 높이에서 120px만큼 뺀다.*/
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+    padding-top: 250px;
+} 
+
+figure video {
+    object-fit: cover;
+    /*영상을 figure 안쪽에 꽉 차도록 설정*/
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0.3;
+}
+
+figure .inner {
+    width: 1180px;
+    margin: 0 auto;
+    position: relative;
+}
+
+figure .inner h1 {
+    font: bold 120px/1 "arial";
+    color: #eee;
+    margin-bottom: 50px;
+}
+
+figure .inner p {
+    font: 16px/1.5 "arial";
+    color: #aaa;
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+figure .inner a {
+    display: block;
+    width: 400px;
+    height: 30px;
+    border: 1px solid #bbb;
+    font: bold 12px/30px "arial";
+    color:#eee;
+    text-align: center;
+    letter-spacing: 1.5px;
+    transition: all 0.5s;
+   
+}
+
+figure .inner a:hover {
+    background-color: #fff;
+    color: #555;
+}
+
+/*figure 끝*/
+
+
+/*article 시작*/
+
+section {
+    width: 100%;
+    padding: 100px 0px;
+}
+
+
+section .inner {
+    width: 1180px;
+    margin: 0px auto;
+} 
+
+section .inner h1 {
+    font: bold 24px/1 "arial";
+    color: #555;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+section .inner .wrap {
+    width: 100%;
+}
+
+section .inner .wrap article {
+    width: 280px;
+    float: left;
+    margin-top: 40px;
+    margin-right: 10px;
+}
+
+/*자식요소인  article의 float해제*/
+section .inner .wrap::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*제일 오른쪽 마지막 요소의 여백 제거*/
+section .inner .wrap article:last-child {
+    margin-right: 0px;
+} 
+
+
+section .inner .wrap article h2 {
+    font: bold 16px/1 "arial";
+    color: #555;
+    margin-bottom: 10px;
+}
+
+section .inner .wrap article p {
+    font: 14px/1.2 "arial";
+    color:#777;
+    text-align: justify;
+}
+
+section .inner .wrap article .pic {
+    width: 100%;
+    height: 120px;
+    background-color: #333;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+section .inner .wrap article .pic img {
+    object-fit: cover;
+    /*pic 프레임 안에 이미지를 꽉 채운다*/
+    width:100%;
+    height: 100%;
+} 
+
+/*section 끝*/
+
+/*footer 시작*/
+
+footer {
+    width: 100%;
+    background-color: #333;
+    padding: 100px 0px;
+    border-top: 1px solid #888;
+}
+
+
+footer .inner {
+    width: 1180px;
+    margin: 0px auto;
+}
+
+footer .inner .upper {
+    width: 100%;
+    border-bottom: 1px solid #777;
+    padding-bottom: 20px;
+}
+/**/
+
+footer .inner .upper::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+footer .inner .upper h1 {
+    font: bold 24px/1 "arial";
+    color: #777;
+    float: left;
+}
+
+footer .inner .upper ul {
+    float: right;
+}
+
+footer .inner .upper ul li {
+    float: left;
+    margin-left: 20px;
+}
+
+footer .inner .upper ul li a {
+     font: 400 14px/1 "arial";
+     color: #777;
+}
+
+footer .inner .lower {
+    width: 100%;
+    padding-top: 20px;
+}
+
+footer .inner .lower address {
+    width: 100%;
+    font: 12px/1.5 "arial";
+    color: #777;
+    margin-bottom: 20px;
+}
+
+footer .inner .lower p {
+    width: 100%;
+    font: 12px/1.5 "arial";
+    color: #777;
+}
+
+
+
+
+
+
